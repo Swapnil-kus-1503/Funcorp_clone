@@ -1,0 +1,153 @@
+body{
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+
+.flickity-page-dots{
+    display: none;
+}
+
+
+#topbar{
+    margin: auto;
+    height: 42px;
+    width: 100%;
+    text-align: center;
+    background-color: #E72B61;
+    border: 1px solid #E72B61;
+}
+
+#carouseldiv{
+    margin: auto;
+    margin-top: 10px;
+    width: 50%;
+    text-align: center;
+}
+#carouseldiv .cell{
+    width: 100%;
+    margin: auto;
+}
+#topbar .flickity-prev-next-button.previous{
+    background: #E72B61;
+}
+#topbar .flickity-prev-next-button.next{
+    background: #E72B61;
+}
+#topbar .flickity-prev-next-button .arrow{
+    fill: white;
+}
+#topbar .flickity-prev-next-button{
+    height: 30px;
+    width: 30px;
+    border: 1px solid #ec7697;
+}
+
+
+
+
+
+
+
+
+
+#navbar{
+    margin: auto;
+    height: 101px;
+    margin-top: 0px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+#navbar ul{
+    overflow: auto;
+}
+
+#navbar li{
+    float: left;
+    list-style: none;
+    margin: 13px 20px;
+}
+
+#navbar li a{
+    text-decoration: none;
+    color: black;
+}
+
+#navbar li a:hover{
+    color: #E72B61;
+}
+
+
+#brandlogo{
+    height: 91px;
+    width: 126px;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+#navbar> p:hover{
+    cursor: pointer;
+    color: #E72B61;
+    display: block;
+}
+
+#searchbar{
+    height: 45px;
+    width: 350px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid rgb(155, 154, 154);
+}
+
+#searchlogo{
+    margin-left: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+#searchinput{
+    height: 30px;
+    width: 300px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: rgb(155, 154, 154);
+}
+
+#logo{
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
+
+img{
+    margin-top: 20px;
+    width: 100%;
+}
+
+#clickhere{
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+#clickhere>a{
+    text-decoration: none;
+    color: rgb(0, 123, 255);
+}

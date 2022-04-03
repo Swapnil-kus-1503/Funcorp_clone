@@ -1,0 +1,164 @@
+
+#topbar{
+  margin: auto;
+  height: 42px;
+  width: 100%;
+  text-align: center;
+  background-color: #E72B61;
+  border: 1px solid #E72B61;
+}
+
+#carouseldiv{
+  margin: auto;
+  margin-top: 10px;
+  width: 50%;
+  text-align: center;
+}
+#carouseldiv .cell{
+  width: 100%;
+  margin: auto;
+}
+#topbar .flickity-prev-next-button.previous{
+  background: #E72B61;
+}
+#topbar .flickity-prev-next-button.next{
+  background: #E72B61;
+}
+#topbar .flickity-prev-next-button .arrow{
+  fill: white;
+}
+#topbar .flickity-prev-next-button{
+  height: 30px;
+  width: 30px;
+  border: 1px solid #ec7697;
+}
+
+
+.flickity-page-dots{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+#giftFinder{
+  margin-top: 5px;
+  height: 580px;
+  display: flex;
+  justify-content: center;
+  background-color: #EB416E;
+  background-blend-mode: overlay;
+  border: 1px solid red;
+}
+
+#giftFinderimg{
+  height: 100%;
+  width: 100%;
+}
+
+#giftfinderh1{
+  position: absolute;
+}
+
+#giftfinderformdiv{
+  margin-top: 100px;
+  padding: 20px;
+  height: 380px;
+  width: 530px;
+  border-radius: 20px;
+  position: absolute;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #747373;
+  background-color: rgb(255, 255, 255);
+  background-blend-mode: overlay;
+}
+
+#giftfinderh1{
+  font-family: Roboto;
+  color: white;
+  font-weight: 800;
+}
+
+#ageselect{
+  padding: 15px;
+  height: 50px;
+  width: 490px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4b4b4b;
+}
+
+#giftpricediv{
+  margin: auto;
+  width: 480px;
+  height: 110px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.pricebtn{
+  height: 40px;
+  width: 140px;
+  border-radius: 8px;
+  font-family: Arial;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #212529c4;
+  border: 1px solid #EB416E;
+  background-color: white;
+  cursor: pointer;
+
+}
+
+.pricebtn:focus{
+  background-color: #E72B61;
+  color: #FFFFFF;
+  }
+
+  #btn:hover {
+    background-color: #00FA9A;
+    
+    }
+
+#submit{
+  margin-top: 25px;
+  height: 55px;
+  width: 500px;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #4A9545;
+  color: white;
+  cursor: pointer;
+}
+
+
+#submit:hover{
+  background-color: rgb(63, 247, 185);
+}
+
+
+
+
+
+
+
+      
+
+

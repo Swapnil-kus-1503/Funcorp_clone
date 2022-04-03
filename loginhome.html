@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=ashu.0">
+    <title>login Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        #mainContainer{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            /* border: 1px solid red; */
+            gap: 20px;
+            box-sizing: border-box;
+
+        }
+        #mainContainer>#label{
+            display: grid;
+            /* background-color: teal; */
+            /* border: 1px solid blue; */
+            width: 30%;
+            height: 400px;
+            padding: 20px;
+            margin-left: 50%;
+            font-size: 18px;
+            color: #666666;
+        }
+
+        #label>#ashu:hover{
+            background-color:  #d4004b;
+            color: white;
+        }
+
+        #box1{
+            width:100%;
+            /* margin-left: 20px; */
+            /* border: 1px solid black; */
+            margin-right: 200px;
+            background-color: #f6f5fc;
+            border-radius: 15px;
+            /* margin-left: 20px; */
+            /* background-color: #666666; */
+        }
+
+        #box1>#welcome{
+            width: 100%;
+            height: 100px;
+            margin-left: 10px;
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+        }
+        #box1>#box2{
+            display: flex;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            /* border: 1px solid red; */
+            gap: 20px;
+            justify-content: space-around;
+        }
+        #box2>div{
+            /* background-color: red; */
+            /* margin-top: px; */
+            padding: 5px 50px 10px 50px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            background-color: white;
+            border-radius: 20px;
+            /* margin-left: 30px; */
+        }
+        #edit{
+            background-color: #d8007b;
+            color: aliceblue;
+            border-radius: 10px;
+            padding:5px 20px 5px 20px;
+            margin-top: 50px;
+            border:none;
+            /* margin-left: none; */
+        }
+        button{
+            background-color: #18d49e;
+            border-radius: 10px;
+            padding:5px 20px 5px 20px;
+            margin-top: 50px;
+            border:none;
+        }
+        #edit,button:hover{
+            cursor: pointer;
+        }
+        #box1>#box3{
+            display: flex;
+            /* border: 1px solid red; */
+            gap: 20px;
+            justify-content: space-around;
+        }
+        #box3>div{
+            margin-top: 10px;
+            /* background-color: red; */
+            /* margin-top: px; */
+            padding: 10px 40px 15px 40px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            background-color: white;
+            border-radius: 20px;
+            margin-bottom: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="topbar">
+        <div id="carouseldiv" class="main-carousel">
+            <div class="cell"><div>Buy Any 4 Frank Puzzles, Get Extra 10% Off. T&C</div></div>
+            <div class="cell"><div>Use SHIFU10 to get 10% off on any PlayShifu products.</div></div>
+            <div class="cell"><div>Free Shipping Above 399 | COD Available | Extra 5% OFF on 1st Order</div></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="navbar">
+        <a href="index.html"><img id="brandlogo" src="https://d2s7hpbx4rtiif.cloudfront.net/logo/stores/1/logo_new.png" alt="funcorplogo"></a>
+        <ul>
+            <li><a href="">Categories</a>
+                <div id="submenu1" class="submenu">
+                    <div class="div1">
+                        <p>Shop By Categories</p>
+                        <div id="searchbarmenu"><img id="searchlogo" src="https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/main_search.png" alt=""> <input type="search" placeholder="Search here....." id="searchinput"></div>
+                    </div>
+                    <div class="div2" >
+                        <a href="category.html">Action Figures</a>
+                        <a href="category.html">Art & Craft Kits</a>
+                        <a href="category.html">Baby & Toddler Toys</a>
+                        <a href="category.html">Bath Toys</a>
+                        <a href="category.html">Board Games</a>
+                        <a href="category.html">Bobbleheads</a>
+                        <a href="category.html">Books</a>
+                        <a href="category.html">Building & Construction</a>
+                        <a href="category.html">Card Games</a>
+                        <a href="category.html">Cars & Vehicle Playsets</a>
+                        <a href="category.html">Collectibles</a>
+                        <a href="category.html">Costumes & Masks</a>
+                        <a href="category.html">Doll Houses</a>
+                        <a href="category.html">Dolls & Accessories</a>
+                        <a href="category.html">Dough</a>
+                        <a href="category.html">Holi Gifts</a>
+                        <a href="category.html">Interactive Toys</a>
+                        <a href="category.html">Learning & Educational</a>
+                        <a href="category.html">Musical Toys & Speakers</a>
+                        <a href="category.html">Outdoor & Sports</a>
+                        <a href="category.html">Party Supplies</a>
+                        <a href="category.html">Play & School Furniture</a>
+                        <a href="category.html">Playsets</a>
+                        <a href="category.html">Pull-Along Toys</a>
+                        <a href="category.html">Puzzles</a>
+                        <a href="category.html">Remote Controlled (RC) Cars & Vehicles</a>
+                        <a href="category.html">Ride-On Toys</a>
+                        <a href="category.html">Robot Toys</a>
+                        <a href="category.html">Slime</a>
+                        <a href="category.html">Soft Toys</a>
+                        <a href="category.html">Spinning Tops</a>
+                        <a href="category.html">Stationery & Supplies</a>
+                        <a href="category.html">Toy Guns & Bullets</a>
+                        <a href="category.html">Trains & Railway Sets</a>
+                    </div>    
+                </div>
+            </li>
+            <li><a href="">Brands</a>
+                <div class="submenu">
+                    <div class="div1">
+                        <p>Shop By Brands</p>
+                        <div id="searchbarmenu"><img id="searchlogo" src="https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/main_search.png" alt=""> <input type="search" placeholder="Search here....." id="searchinput"></div>
+                    </div>
+                    <div class="div2" >
+                        <a href="brand.html">4M</a>
+                        <a href="brand.html">Asmodee</a>
+                        <a href="brand.html">Baby Alive</a>
+                        <a href="brand.html">Barbie</a>
+                        <a href="brand.html">Beados</a>
+                        <a href="brand.html">Big</a>
+                        <a href="brand.html">Bubble Magic</a>
+                        <a href="brand.html">Chu Chu TV</a>
+                        <a href="brand.html">Cool Maker</a>
+                        <a href="brand.html">Cra-Z-Art</a>
+                        <a href="brand.html">Craft In Books</a>
+                        <a href="brand.html">CupCake Surprise</a>
+                        <a href="brand.html">Dickie</a>
+                        <a href="brand.html">Discovery</a>
+                        <a href="brand.html">Disney</a>
+                        <a href="brand.html">Dr. Mady</a>
+                        <a href="brand.html">Ecoiffier</a>
+                        <a href="brand.html">Fisher Price</a>
+                        <a href="brand.html">Fortnite</a>
+                        <a href="brand.html">Frank</a>
+                        <a href="brand.html">Funko</a>
+                        <a href="brand.html">Funskool</a>
+                        <a href="brand.html">Funvention</a>
+                        <a href="brand.html">FurReal Friends</a>
+                        <a href="brand.html">Giggles</a>
+                        <a href="brand.html">Go Glam Nails</a>
+                        <a href="brand.html">Goliath Games</a>
+                        <a href="brand.html">Hairdorables Doll</a>
+                        <a href="brand.html">Hasbro Gaming</a>
+                        <a href="brand.html ">Hatchimals Colleggtibles</a>
+                        <a href="brand.html">Hot Wheels</a>
+                        <a href="brand.html">Infinity Nado</a>
+                        <a href="brand.html">Jada</a>
+                        <a href="brand.html">Kindi Kids</a>
+                        <a href="brand.html">Kinetic Sand</a>
+                        <a href="brand.html">LeapFrog</a>
+                        <a href="brand.html">Learning Resources</a>
+                    </div>    
+                </div>
+            </li>
+            <li><a href="">Characters</a>
+                <div class="submenu">
+                    <div class="div1">
+                        <p>Shop By Characters</p>
+                        <div id="searchbarmenu"><img id="searchlogo" src="https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/main_search.png" alt=""> <input type="search" placeholder="Search here....." id="searchinput"></div>
+                    </div>
+                    <div class="div2" >
+                        <a href="character.html">Aladdin</a>
+                        <a href="character.html">Athletes</a>
+                        <a href="character.html">Avengers</a>
+                        <a href="character.html">Batman</a>
+                        <a href="character.html">Beyblades</a>
+                        <a href="character.html">Big Bang Theory</a>
+                        <a href="character.html">Black Panther</a>
+                        <a href="character.html">Black Widow</a>
+                        <a href="character.html">Captain America</a>
+                        <a href="character.html">Captain Marvel</a>
+                        <a href="character.html">Cars</a>
+                        <a href="character.html">Deadpool</a>
+                        <a href="character.html">Disney Frozen</a>
+                        <a href="character.html">Disney Princess</a>
+                        <a href="character.html">Doctor Strange</a>
+                        <a href="character.html">Dragon Ball Z</a>
+                        <a href="character.html">Fantastic Four</a>
+                        <a href="character.html">Fast & Furious</a>
+                        <a href="character.html">Friends</a>
+                        <a href="character.html">G.I. Joe</a>
+                        <a href="character.html">Game Of Thrones</a>
+                        <a href="character.html">Guardians Of The Galaxy</a>
+                        <a href="character.html">Harry Potter</a>
+                        <a href="character.html">Hulk</a>
+                        <a href="character.html">Iron Man</a>
+                        <a href="character.html">Joker</a>
+                        <a href="character.html">Jungle</a>
+                        <a href="character.html">Jurassic World</a>
+                        <a href="character.html">Justice League</a>
+                        <a href="character.html">Masha And The Bear</a>
+                        <a href="character.html">Mickey Mouse</a>
+                        <a href="character.html">Minions</a>
+                        <a href="character.html">Money Heist</a>
+                        <a href="character.html">Power Rangers</a>
+                        <a href="character.html">Rick And Morty</a>
+                        <a href="character.html">Shazam</a>
+                        <a href="character.html">Spiderman</a>
+                        <a href="character.html">Star Wars</a>
+                        <a href="character.html">Stranger Things</a>
+                        <a href="character.html">Suicide Squad</a>
+                    </div>    
+                </div>
+            </li>
+            <li><a href="giftRegistry.html">Gift Registry</a></li>
+            <li><a href="FunLab.html">Funlab</a></li>
+            <li><a href="Gift_Finder.html">Gift Finder</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div id="searchbar"><img id="searchlogo" src="https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/main_search.png" alt=""> <input type="search" placeholder="Search here....." id="searchinput"></div>
+        <img class="whatsapp" id="logo" src="https://d2s7hpbx4rtiif.cloudfront.net/theme/icon/whatsapp.svg" alt="whatsapplogo">
+        <a href="login1.html"><img class="contacts" id="logo" src="https://d2s7hpbx4rtiif.cloudfront.net/theme/icon/user-icon.svg" alt="contactslogo"></a>
+        <a href="cart.html"><img class="cart" id="logo" src="https://d2s7hpbx4rtiif.cloudfront.net/theme/icon/shop_cart.svg" alt="cartlogo"></a>
+    </div>
+
+
+
+    <div id="mainContainer">
+        <div id="label">
+            <label id="ashu">Account</label><br>
+            <label id="ashu">Orders</label><br>
+            <label id="ashu">Wishlist</label><br>
+            <label id="ashu">My Better Blog</label><br>
+            <label id="ashu">Adress Book</label><br>
+            <label id="ashu">Profile</label><br>
+            <label id="ashu">Product Reviews</label><br>
+            <label id="ashu">My Support Tickets</label><br>
+            <label id="ashu">Update Mobile Number</label><br>
+            <label id="ashu">Gift Registry</label><br>
+        </div>
+
+        <div id="box1">
+            <div id="welcome">
+                <h1>Welcome USER !</h1>
+            </div>
+            
+            <p style="color: #d4004b; font-size: 20px; margin-left: 15px;" >Account</p>
+            <div id="box2">
+                <div>
+                    <h3>CONTACT INFORMATION</h3>
+                    <button id="edit">Edit</button>
+                    <button>Change Password</button>
+                </div>
+                <div>
+                    <h3>NEWSLETTERS</h3>
+                    <p>You are not subscribed to our newsletters</p>
+                    <button id="edit" style="margin-top: 25px;">Edit</button>
+                </div>
+            </div>
+            
+            <p style="color: #d4004b; font-size: 20px; margin-top: 10px; margin-left: 15px;" >Address Book</p>
+            <div id="box3">
+                <div>
+                    <h3>DEFAULT BILLING ADDRESS</h3>
+                    <p>You have not set a default billing address</p>
+                    <button id="edit">Edit</button>
+                </div>
+                <div>
+                    <h3>DEFAULT SHIPPING ADDRESS</h3>
+                    <p>You have not set a default shipping address</p>
+                    <button id="edit">Edit</button>
+
+                </div>
+            </div>       
+        </div>
+    </div>
+
+
+
+
+
+    
+    </div>
+</body>
+</html>
+
+<script>
+    $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  wrapAround: true,
+  freeScroll: true,
+});
+</script>

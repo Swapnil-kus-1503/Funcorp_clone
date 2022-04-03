@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Oswald:wght@200;300;400;500&display=swap');
+body{
+    margin-top: 100px;
+    
+}
+.solid{
+    border-top: 20px solid #4ebaaf;
+    width: 100%;
+    margin-top: -10px ;
+   
+}
+#container{
+   height: auto;
+   /* border: 1px solid black; */
+   width: 75%;
+   padding-top: 10px;
+   margin: auto;
+   background-color:#f9f9f9 ;
+
+}
+
+#upper-Contact{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 5%;
+    font-family: 'Oswald';
+    /* border: 1px solid black; */
+   
+    
+}
+.border{
+    width: 96%;
+    border: 1px solid #f2f2f2;
+    margin: auto;
+}
+#upper-Contact>.inner-box{
+    text-align: center;
+    /* border: 1px solid red; */
+    margin: auto;
+   
+
+}
+.inner-box>img{
+    width: 40px;
+}
+.inner-box>h3{
+    font-size: 15px;
+    margin: 10px 10px 15px; 
+    letter-spacing: 4px;
+    color: #3d3d3d;
+    font-weight: 500;
+}
+.inner-box>p{
+    font-family:'Open sans';
+    color: #3d3d3d;
+}
+.heading{
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.heading>h2{
+    font-size: 20px;
+    font-family: 'Oswald';
+    letter-spacing: 5px;
+    font-weight: 500;
+    color:#e72b61;
+
+}
+.heading>p{
+    font-family:'Open sans';
+    font-size: 15px;
+    line-height: 10px;
+}
+.Contact-Us-Form>h2{
+    font-family:'Open sans';
+    font-size: 16px;
+    font-weight: 800;
+    color: #484848;
+    padding-bottom:7px;
+    padding-left: 25px;
+    border-bottom: 1px solid rgba(108,108,108,.1);
+    margin-bottom: 20px;
+    line-height: 19px;
+}
+
+.Contact-Us-Form>h2>span{
+    color: #e65270;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+.Contact-Us-Form{
+    width: 98%;
+    /* border: 1px solid black; */
+    height: 500px;
+    margin: auto;
+    background-color:#f9f9f9;
+}
+.Contact-Us-Form>form{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+
+}
+.Contact-Us-Form>form>div{
+    width: 49%;
+    /* border: 1px solid black; */
+    /* gap: 10px; */
+    
+}
+.Contact-Us-Form input{
+    box-shadow: none;
+    border: 1px solid #e7e8e8;
+    height: 40px;
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 0px 16px
+}
+
+button{
+    border: none;
+    margin-top: 150px ;
+    cursor: pointer;
+    }
+   
+a{
+    text-decoration: none;
+    color: white;
+    background-color: #18d49e;
+    border-radius: 20px;
+    padding:15px 40px 15px 40px ;
+    
+
+}
+a:hover{
+    color: white;
+    background-color:#18d49e;
+    border-radius: 20px;
+    padding:15px 40px 15px 40px;
+}
+#Enquires{
+    box-shadow: none;
+    border: 0.2px solid #e7e8e8;
+    height: 40px;
+    width: 98%;
+    margin-bottom: 10px;
+    margin-left: 2%;
+    padding: 10px 15px;
+}
+textarea{
+    box-shadow: none;
+    border: 0.2px solid #e7e8e8;
+    height: 75px;
+    width: 92%;
+    margin-bottom: 10px;
+    margin-left: 2%;
+    padding: 10px 15px;
+    resize: none;
+    display:block;
+
+ 
+}
+
+#Corporate{
+    width: 90%;
+    /* border: 1px solid black; */
+    padding: 10px 15px 10px 15px;
+    margin: auto;
+    margin-top: 4%;
+
+} 
+#Corporate>h1{
+    font-family:'Open sans';
+    font-size: 18px;
+}
+
+#Corporate>p{
+    font-family:'Open sans';
+    font-size: 15px;
+    margin: 0px 0px 5px;
+}
+.colid{
+    background: #f9f9f9;
+    margin-top: 25px;
+    border: 17px solid #f2f2f2;
+}
+
+

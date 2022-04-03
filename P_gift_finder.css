@@ -1,0 +1,171 @@
+
+
+#navbar{
+    margin: auto;
+    height: 101px;
+    margin-top: 0px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+#navbar ul{
+    overflow: auto;
+}
+
+#navbar ul li{
+    float: left;
+    list-style: none;
+    margin: 13px 20px;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin-left: -10px;
+}
+
+#navbar ul li a:hover{
+    color: #E72B61;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    margin-top: 0px;
+    height: fit-content;
+    width: fit-content;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#navbar ul li:hover .submenu{
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar ul li:hover .submenu:hover{
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu > .div1{
+    height: 40px;
+    width: 900px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(201, 193, 193);
+}
+.submenu > .div1>p{
+    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 40px;
+    font-weight: 800;
+    margin-right: 15px;
+    font-size: 18px;
+    color: #E72B61;
+}
+.submenu > .div2{
+    margin-top: 15px;
+    height: 350px;
+    width: 950px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* border: 1px solid blue; */
+}
+.submenu > .div2 > a{
+    margin: auto;
+    height: fit-content;
+    width: 200px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submenu > .div2 > a:hover{
+    font-size: 18px;
+}
+#searchbarmenu{
+    height: 30px;
+    width: 250px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid rgb(155, 154, 154);
+}
+
+#searchbarmenu #searchlogo{
+    margin-left: 5px;
+    height: 20px;
+    width: 20px;
+    /* border: 1px solid red; */
+}
+
+#searchbarmenu #searchinput{
+    height: 25px;
+    width: 200px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: rgb(155, 154, 154);
+    /* border: 1px solid red; */
+}
+  
+
+#brandlogo{
+    height: 91px;
+    width: 126px;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+#navbar> p:hover{
+    cursor: pointer;
+    color: #E72B61;
+    display: block;
+}
+
+#searchbar{
+    height: 45px;
+    width: 350px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid rgb(155, 154, 154);
+}
+
+#searchlogo{
+    margin-left: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+#searchinput{
+    height: 30px;
+    width: 300px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: rgb(155, 154, 154);
+}
+
+#logo{
+    height: 30px;
+    width: 30px;
+}
+
+
+

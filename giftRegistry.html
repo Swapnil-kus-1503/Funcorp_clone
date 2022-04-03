@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Gift Registry</title>
+
+    <!-- FAQ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="v_giftregistry.css"> -->
+    
+<!-- fliciky -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+    <style>
+        body{
+            margin: 0%;
+            overflow-x: hidden;
+        }
+
+        #topbar{
+        margin: auto;
+        height: 42px;
+        width: 100%;
+        text-align: center;
+        background-color: #E72B61;
+        border: 1px solid #E72B61;
+    }
+
+    #carouseldiv{
+        margin: auto;
+        margin-top: 10px;
+        width: 50%;
+        text-align: center;
+    }
+    #carouseldiv .cell{
+        width: 100%;
+        margin: auto;
+    }
+    #topbar .flickity-prev-next-button.previous{
+        background: #E72B61;
+    }
+    #topbar .flickity-prev-next-button.next{
+        background: #E72B61;
+    }
+    #topbar .flickity-prev-next-button .arrow{
+        fill: white;
+    }
+    #topbar .flickity-prev-next-button{
+        height: 30px;
+        width: 30px;
+        border: 1px solid #ec7697;
+    }
+
+    .flickity-page-dots{
+        display: none;
+      }
+
+
+      /* navbar */
+
+      #navbar{
+        margin: auto;
+        height: 101px;
+        margin-top: 15px;
+        display: flex;
+        position: sticky;
+        top: 0;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: white;
+    }
+    
+    #navbar ul{
+        overflow: auto;
+    }
+    
+    #navbar ul li{
+        float: left;
+        list-style: none;
+        margin: 13px 10px;
+        
+    }
+    
+    #navbar ul li a{
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        margin-left: -10px;
+    }
+    
+    #navbar ul li a:hover{
+        color: #E72B61;
+    }
+    
+    .submenu{
+        display: none;
+        position: absolute;
+        position: fixed;
+        background-color: rgb(255, 255, 255);
+        margin-top: 0px;
+        height: fit-content;
+        width: fit-content;
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    #navbar ul li:hover .submenu{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #navbar ul li:hover .submenu:hover{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .submenu > .div1{
+        height: 40px;
+        width: 900px;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(201, 193, 193);
+    }
+    .submenu > .div1>p{
+        margin-top: 12px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        font-size: 40px;
+        font-weight: 800;
+        margin-right: 15px;
+        font-size: 18px;
+        color: #E72B61;
+    }
+    .submenu > .div2{
+        margin-top: 15px;
+        height: 350px;
+        width: 950px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* border: 1px solid blue; */
+    }
+    .submenu > .div2 > a{
+        margin: auto;
+        height: fit-content;
+        width: 200px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .submenu > .div2 > a:hover{
+        font-size: 18px;
+    }
+    #searchbarmenu{
+        height: 30px;
+        width: 250px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid rgb(155, 154, 154);
+    }
+    
+    #searchbarmenu #searchlogo{
+        margin-left: 5px;
+        height: 20px;
+        width: 20px;
+        /* border: 1px solid red; */
+    }
+    
+    #searchbarmenu #searchinput{
+        height: 25px;
+        width: 200px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        color: rgb(155, 154, 154);
+        /* border: 1px solid red; */
+    }
+      
+    
+    #brandlogo{
+        height: 91px;
+        width: 126px;
+        margin-right: -30px;
+    }
+    
+    p{
+        font-family: sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 27px;
+    }
+    
+    #navbar> p:hover{
+        cursor: pointer;
+        color: #E72B61;
+        display: block;
+    }
+    
+    #searchbar{
+        height: 45px;
+        width: 350px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid rgb(155, 154, 154);
+    }
+    
+    #searchlogo{
+        margin-left: 5px;
+        height: 20px;
+        width: 20px;
+    }
+    
+    #searchinput{
+        height: 30px;
+        width: 300px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        color: rgb(155, 154, 154);
+    }
+    
+    #logo{
+        height: 30px;
+        width: 30px;
+    }
+
+
+        .part1{
+            display: flex;
+            /* border: 1px solid red; */
+            margin-top: 5px;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        
+        .part1>div{
+            /* border: 1px solid blue; */
+            display: flex;
+            height: 380px;
+            width: 100%;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        .innerBox{
+            margin: auto;
+            /* border: 1px solid blue; */
+            height: auto;
+            width:400px;
+            margin-top: 100px;
+            /* margin-bottom: 100px; */
+            box-sizing: border-box;
+            
+        }
+        .part1 button{
+            padding: 9px;
+            display: block;
+            margin: auto;
+            border-radius: 20px;
+            width: 68%;
+            border: 0px;
+            color: #FFFFFF;
+            font-size: medium;
+            font-weight: bold;
+            margin-bottom: -10px;
+        }
+        .part1 button:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .part1 input{
+            padding: 10px;
+            width:93% ;
+            border-radius: 25px;
+        }
+        .heading1{
+            text-align: center;
+            line-height: 20px;
+            font-family: 'Boogaloo', cursive;
+            color: #df3b69;
+            font-weight:bolder;
+            /* border : 1px solid blue; */
+            
+        }
+        .heading1 h2{
+            font-size:18px;
+            font-weight: bolder;
+            font-family: 'Boogaloo', cursive;
+        }
+        .heading1 p{
+            font-family: 'Roboto', sans-serif;
+            font-weight:500;
+            color: black;
+            font-size: 18px;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(5,15%);
+            grid-template-rows: auto;
+            /* border: 1px solid blue; */
+            justify-content: center;
+            /* gap: -115px; */
+        }
+        #box{
+            /* border: 1px solid blue; */
+            height: 310px;
+            width: 170px;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: auto;
+        }
+        #d1{
+            border: 15px solid blue;
+            height: 130px;
+            width: 130px;
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            font-size: 40px;
+            font-weight: bolder;
+            font-family: 'Roboto', sans-serif;
+        }
+        #d2{
+            border: 10px solid blue;
+            height: 25px;
+            width: 25px;
+            margin: auto;
+            transform:rotate(45deg);
+            margin-top: -17px;
+            border-top: 0px;
+            border-left: 0px;
+        }
+        #box p{
+            text-align: center;
+            font-size: 17px;
+            font-family: 'Roboto', sans-serif;
+            font-weight:400;
+        }
+        #container1{
+            display: grid;
+            grid-template-columns: repeat(5,14%);
+            grid-template-rows: auto;
+            /* border: 1px solid blue; */
+            justify-content: center;
+            /* gap: -115px; */
+        }
+        #box1{
+            height: 330px;
+            width: 170px;
+            padding: 5px;
+            box-sizing: border-box;
+            /* border:1px solid blue; */
+            text-align: center;
+            margin: auto;
+        }
+        #circle1{
+            height:145px;
+            width:95%;
+            border:2px solid #D52859;
+            margin: auto;
+            border-style:dashed;
+            border-radius: 50%;
+            padding:5px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #circle2{
+            height:125px;
+            width:129px;
+            border:25px solid #D52859;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #image1{
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: auto;
+            margin-top: 14px;
+            
+        }
+        #pointer{
+            border: 5px solid #D52859;
+            height: 20px;
+            width:20px;
+            margin: auto;
+            border-radius: 50%;
+        }
+        #line{
+            border: 3px solid #D52859;
+            height: 18px;
+            width: 0px;
+            margin: auto;
+            margin-top: -5px;
+            border-radius: 30%;
+            
+        }
+        #box1 h3{
+            margin-top: 15px;
+            font-size: 19px;
+        }
+        #box1 p{
+            margin-top: -5px;
+            color: #545454;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+        }
+        #container4{
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+         #box3{
+            height: 533px;
+            width: 341px;
+            background-size:contain;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        #box3:hover{
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
+        #box2{
+            width: 340px;
+            height: 60px;
+            margin-top: 139%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: #FFFFFF;
+            padding: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        .firstbottom{
+            /* border: 1px solid blue; */
+            height: 140px;
+            /* padding: 10px; */
+            display: flex;
+            justify-content: center;
+            background-color: #F9D9E9;
+        }
+        .secoundbottom{
+            /* border: 1px solid blue; */
+            height: 45px;
+            display: flex;
+            text-align: center;
+            color: #FFFFFF;
+            background-color: #E72B61;
+            justify-content: center;
+            align-items: center;
+        }
+        .innerbox1{
+            height: 90px;
+            width: 300px;
+            /* border: 1px solid goldenrod; */
+            margin-top: 50px;
+            /* padding-left:  30px;
+            box-sizing: border-box; */
+        }
+        .brandlogo1 button{
+            border-radius: 50%;
+            border: 2px solid #000000;
+            background-color: #FFFFFF;
+            height: 40px;
+            width: 40px;
+            background-color: #F9D9E9;
+            cursor: pointer;
+        }
+        .brandlogo1 a{
+            text-decoration: none;
+        }
+        .brandlogo1{
+            margin: auto;
+            width:150px;
+            display: flex;
+            /* border: 1px solid red; */
+            gap: 10px;
+            
+        }
+        .para{
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .secoundbottom p{
+            margin-right: 7px;
+            margin-left: 7px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            /* border: 1px solid blue; */
+            margin-top: 14px;
+        }
+
+
+        .accordion{
+            /* border: 1px solid blue; */
+            width: 1000px;
+            height: auto;
+            margin: auto;
+            padding: 20px;
+        }
+        h6+p{
+            color: #969696;
+            font-weight:500;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .accordion-item{
+            /* height: 60px; */
+            padding: 14px;
+            border: 1px solid #D1D1D1;
+            border-left: 0px;
+            border-right: 0px;
+        }
+        .accordion-item h2 button{
+            color: #373f46;
+        }
+        .accordion-item.active{
+            border-color: #000000;
+        }
+        .accordion-button:focus{
+            color: none;
+            box-shadow: none;
+            
+        }
+        .accordion-button{
+            font-weight: bolder;
+        }
+        .accordion-button:not(.collapsed){
+            color: #000000;
+            background-color: #FFFFFF;
+            font-weight: bolder;
+            
+        }
+        .accordion-button::after{
+        background-image: url(https://petersanders.com/wp-content/uploads/2021/04/free-png-plus-sign-transparent-plus-signpng-images-pluspng-plus-sign-transparent-background-512_512.png);
+        }
+        .accordion-button:not(.collapsed)::after{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9LXDQCyqh-QYXAhu9GdeTN9SfJFBhWZNL3A&usqp=CAU);
+        }
+
+        .accordion{
+            /* border: none; */
+            height: auto;
+            width: 1000px
+        }
+            .accordion-flush .accordion-item:first-child {
+             border-top: 1px solid #D1D1D1;
+        }
+            .accordion-flush .accordion-item:last-child {
+            border-bottom: 1px solid #D1D1D1;
+        }
+
+    </style>
+</head>
+<body>
+
+        <!-- topbar -->
+        <div id="topbar">
+            <div id="carouseldiv" class="main-carousel">
+                <div class="cell"><div>Buy Any 4 Frank Puzzles, Get Extra 10% Off. T&C</div></div>
+                <div class="cell"><div>Use SHIFU10 to get 10% off on any PlayShifu products.</div></div>
+                <div class="cell"><div>Free Shipping Above 399 | COD Available | Extra 5% OFF on 1st Order</div></div>
+            </div>
+        </div>
+    
+        <!-- navbar -->
+        <div id="navbar">
+            <a href="index.html"><img id="brandlogo" src="https://d2s7hpbx4rtiif.cloudfront.net/logo/stores/1/logo_new.png" alt="funcorplogo"></a>
+            <ul>
+                <li><a href="">Categories</a>
+                    <div id="submenu1" class="submenu">
+                        <div class="div1">
+                            <p>Shop By Categories</p>
+                            <div id="searchbarmenu"><img id="searchlogo" src="https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/main_search.png" alt=""> <input type="search" placeholder="Search here....." id="searchinput"></div>
+                        </div>
+                        <div class="div2" >
+                            <a href="category.html">Action Figures</a>
+                            <a href="category.html">Art & Craft Kits</a>
+                            <a href="category.html">Baby & Toddler Toys</a>
+                            <a href="category.html">Bath Toys</a>
+                            <a href="category.html">Board Games</a>
+                            <a href="category.html">Bobbleheads</a>
+                            <a href="category.html">Books</a>
+                            <a href="category.html">Building & Construction</a>
+                            <a href="category.html">Card Games</a>
+                            <a href="category.html">Cars & Vehicle Playsets</a>
+                            <a href="category.html">Collectibles</a>
+                            <a href="category.html">Costumes & Masks</a>
+                            <a href="category.html">Doll Houses</a>
+                            <a href="category.html">Dolls & Accessories</a>
+                            <a href="category.html">Dough</a>
+                            <a href="category.html">Holi Gifts</a>
+                            <a href="category.html">Interactive Toys</a>
+                            <a href="category.html">Learning & Educational</a>
+                            <a href="category.html">Musical Toys & Speakers</a>
+                            <a href="category.html">Outdoor & Sports</a>
+                            <a href="category.html">Party Supplies</a>
+                            <a href="category.html">Play & School Furniture</a>
+                            <a href="category.html">Playsets</a>
+                            <a href="category.html">Pull-Along Toys</a>
+                            <a href="category.html">Puzzles</a>
+                            <a href="category.html">Remote Controlled (RC) Cars & Vehicles</a>
+                            <a href="category.html">Ride-On Toys</a>
+                            <a href="category.html">Robot Toys</a>
+                            <a href="category.html">Slime</a>
+                            <a href="category.html">Soft Toys</a>
+                            <a href="category.html">Spinning Tops</a>
+                            <a href="category.html">Stationery & Supplies</a>
+                            <a href="category.html">Toy Guns & Bullets</a>
+                            <a href="category.html">Trains & Railway Sets</a>
+                        </div>    
+                    </div>
+                </li>
+                <li><a href="">Brands</a>
+                    <div class="submenu">
+                        <div class="div1">
+                            <p>Shop By Brands</p>
+                            <div id="searchbarmenu"><img id="searchlogo" src="https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/main_search.png" alt=""> <input type="search" placeholder="Search here....." id="searchinput"></div>
+                        </div>
+                        <div class="div2" >
+                            <a href="brand.html">4M</a>
+                            <a href="brand.html">Asmodee</a>
+                            <a href="brand.html">Baby Alive</a>
+                            <a href="brand.html">Barbie</a>
+                            <a href="brand.html">Beados</a>
+                            <a href="brand.html">Big</a>
+                            <a href="brand.html">Bubble Magic</a>
+                            <a href="brand.html">Chu Chu TV</a>
+                            <a href="brand.html">Cool Maker</a>
+                            <a href="brand.html">Cra-Z-Art</a>
+                            <a href="brand.html">Craft In Books</a>
+                            <a href="brand.html">CupCake Surprise</a>
+                            <a href="brand.html">Dickie</a>
+                            <a href="brand.html">Discovery</a>
+                            <a href="brand.html">Disney</a>
+                            <a href="brand.html">Dr. Mady</a>
+                            <a href="brand.html">Ecoiffier</a>
+                            <a href="brand.html">Fisher Price</a>
+                            <a href="brand.html">Fortnite</a>
+                            <a href="brand.html">Frank</a>
+                            <a href="brand.html">Funko</a>
+                            <a href="brand.html">Funskool</a>
+                            <a href="brand.html">Funvention</a>
+                            <a href="brand.html">FurReal Friends</a>
+                            <a href="brand.html">Giggles</a>
+                            <a href="brand.html">Go Glam Nails</a>
+                            <a href="brand.html">Goliath Games</a>
+                            <a href="brand.html">Hairdorables Doll</a>
+                            <a href="brand.html">Hasbro Gaming</a>
+                            <a href="brand.html ">Hatchimals Colleggtibles</a>
+                            <a href="brand.html">Hot Wheels</a>
+                            <a href="brand.html">Infinity Nado</a>
+                            <a href="brand.html">Jada</a>
+                            <a href="brand.html">Kindi Kids</a>
+                            <a href="brand.html">Kinetic Sand</a>
+                            <a href="brand.html">LeapFrog</a>
+                            <a href="brand.html">Learning Resources</a>
+                        </div>    
+                    </div>
+                </li>
+                <li><a href="">Characters</a>
+                    <div class="submenu">
+                        <div class="div1">
+                            <p>Shop By Characters</p>
+                            <div id="searchbarmenu"><img id="searchlogo" src="https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/main_search.png" alt=""> <input type="search" placeholder="Search here....." id="searchinput"></div>
+                        </div>
+                        <div class="div2" >
+                            <a href="character.html">Aladdin</a>
+                            <a href="character.html">Athletes</a>
+                            <a href="character.html">Avengers</a>
+                            <a href="character.html">Batman</a>
+                            <a href="character.html">Beyblades</a>
+                            <a href="character.html">Big Bang Theory</a>
+                            <a href="character.html">Black Panther</a>
+                            <a href="character.html">Black Widow</a>
+                            <a href="character.html">Captain America</a>
+                            <a href="character.html">Captain Marvel</a>
+                            <a href="character.html">Cars</a>
+                            <a href="character.html">Deadpool</a>
+                            <a href="character.html">Disney Frozen</a>
+                            <a href="character.html">Disney Princess</a>
+                            <a href="character.html">Doctor Strange</a>
+                            <a href="character.html">Dragon Ball Z</a>
+                            <a href="character.html">Fantastic Four</a>
+                            <a href="character.html">Fast & Furious</a>
+                            <a href="character.html">Friends</a>
+                            <a href="character.html">G.I. Joe</a>
+                            <a href="character.html">Game Of Thrones</a>
+                            <a href="character.html">Guardians Of The Galaxy</a>
+                            <a href="character.html">Harry Potter</a>
+                            <a href="character.html">Hulk</a>
+                            <a href="character.html">Iron Man</a>
+                            <a href="character.html">Joker</a>
+                            <a href="character.html">Jungle</a>
+                            <a href="character.html">Jurassic World</a>
+                            <a href="character.html">Justice League</a>
+                            <a href="character.html">Masha And The Bear</a>
+                            <a href="character.html">Mickey Mouse</a>
+                            <a href="character.html">Minions</a>
+                            <a href="character.html">Money Heist</a>
+                            <a href="character.html">Power Rangers</a>
+                            <a href="character.html">Rick And Morty</a>
+                            <a href="character.html">Shazam</a>
+                            <a href="character.html">Spiderman</a>
+                            <a href="character.html">Star Wars</a>
+                            <a href="character.html">Stranger Things</a>
+                            <a href="character.html">Suicide Squad</a>
+                        </div>    
+                    </div>
+                </li>
+                <li><a href="giftRegistry.html">Gift Registry</a></li>
+                <li><a href="FunLab.html">Funlab</a></li>
+                <li><a href="Gift_Finder.html">Gift Finder</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div id="searchbar"><img id="searchlogo" src="https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/main_search.png" alt=""> <input type="search" placeholder="Search here....." id="searchinput"></div>
+            <img class="whatsapp" id="logo" src="https://d2s7hpbx4rtiif.cloudfront.net/theme/icon/whatsapp.svg" alt="whatsapplogo">
+            <a href="login1.html"><img class="contacts" id="logo" src="https://d2s7hpbx4rtiif.cloudfront.net/theme/icon/user-icon.svg" alt="contactslogo"></a>
+            <a href="cart.html"><img class="cart" id="logo" src="https://d2s7hpbx4rtiif.cloudfront.net/theme/icon/shop_cart.svg" alt="cartlogo"></a>
+        </div>
+    
+
+    
+    <div class="part1">
+            <div style="background-image: url(https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/gift-registry-left.jpg);">s
+            </div>
+            <div style="background-image: url(https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/gift-registry-right.jpg);" class="manage">
+                <div class="innerBox">
+                    <a href="giftinfo.html">
+                        <button style="background-color: #E72B61;">Create your Gift Registry</button><br>
+                    </a>
+                    <a href=""><button style="background-color: #B5D067;">Manage your Gift Registry</button></a><br>
+                    <input type="text" placeholder="Search by Name, Email or Registry Title" style="border:1px solid #D52859;"><br>
+                    <br>
+                    <button style="width: 140px;background-color: #E72B61;padding: 8px;;">Search</button><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="heading1">
+        <h2>WHY CREATE A GIFT REGISTRY?</h2>
+        <p>Choose what gifts you want to get on your special occasion.</p>
+    </div>
+    
+    <div id="container">
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="heading1">
+        <h2>A Gift For Every Occasion</h2>
+        <p>Choose The Type of Registry You Want to Create</p>
+    </div>
+    <br>
+    <div id="container4">
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="heading1">
+        <h2>HOW IT WORKS</h2>
+        <p>5 Steps To Help You Get The Perfect Gift</p>
+    </div>
+    <br>
+    <div id="container1">
+
+    </div>
+    <br>
+    <br>
+    <div class="heading1">
+        <h2>HAVE UNANSWERED QUESTIONS?</h2>
+        <p>We've Got All The Answers.</p>
+    </div>
+
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  CREATING GIFT REGISTRY
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <h6>
+                  Gift Registry? What is that?
+                </h6>
+                <p>
+                  Are you hoarding gifts that are of no use? Are you passing on gifts you received but don’t like? We will help you create a list of gifts that you actually want! A Gift registry is basically a Wishlist of your gifts for any occasion!
+                </p>
+                <h6>
+                  What is the purpose of a Gift Registry?
+                </h6>
+                <p>
+                  If you are tired of getting gifts that you don’t want, Gift Registry is perfect for you. It is the best way to get gifts that you love or want. Using a Registry is as simple as creating a Wishlist! The difference is that this Wishlist will get shared among your friends and family and they can choose the item they want to gift to you! This list can be curated for you or a special someone for birthdays, baby showers, house warming, anniversaries and even surprise parties!
+                </p>
+                <h6>
+                  What occasions can I create a Gift Registry for?
+                </h6>
+                <p>
+                  From baby showers to housewarmings, farewells and birthdays, the list is endless. You can create a Registry for any giftable occasion.
+                </p>
+                <h6>
+                  How do I create a Gift Registry?
+                </h6>
+                <p>
+                  It's easy! Go to your Account and choose the Gift Registry option or Visit Click Here and get started in 3 easy steps. Add your favorite products to the Registry and curate your registry, then share it with your world. Please note, you must be a user on Funcorp in order to create Gift Registry
+                </p>
+                <h6>
+                  Who is a Gift Recipient?
+                </h6>
+                <p>
+                  A gift recipient is a person who will be receiving the gift. You can create a Gift Registry for yourself or for your friends/family members or anyone you know.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  SHARING A REGISTRY
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  <h6>
+                      How will any person find my Gift Registry?
+                    </h6>
+                    <p>
+                      It’s extremely simple! After you’ve curated your final list you can start sharing it with your friends and family on Social Media, E-mail or even Whatsapp using the URL for your Registry! They can even search for your registry name in the Funcorp Gift Registry Section!
+                    </p>
+                  <h6>
+                      How do I find a Gift Registry made by my someone I know?
+                    </h6>
+                    <p>
+                      You can easily search for your acquaintance’s Registry via their name or email ID. Alternatively, you can also ask them to share the unique link to their Registry.
+                    </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  CONTRIBUTING TO A REGISTRY
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  <h6>
+                      How do I buy a gift from my friend's Gift Registry?
+                    </h6>
+                    <p>
+                      Although all registries are public, using the unique URL for your friend/family’s registry is preferred as sensitive information such as recipient details like shipping address and contact details are kept private. Once you visit the registry, browse through the products and select the gift you want to pay for and place an order to buy it.
+                    </p>
+                  <h6>
+                      How does 'Make A Contribution' on the Gift Registry products work?
+                    </h6>
+                    <p>
+                      If you are not sure about buying an entire product, we also present to you the option of making a contribution towards it. Just decide how much you would want to contribute and click on the Make a Contribution button, proceed to checkout to confirm your contribution. The order will be confirmed when we receive a full contribution matching the exact amount of the product.
+                    </p>
+                  <h6>
+                      What if I can't decide which product to gift?
+                    </h6>
+                    <p>
+                      If you're confused about what to pick from the choices available, just choose a Funcorp Gift Card for the desired amount, and we’ll share it with the recipient on mail!
+                    </p>
+              </div>
+              
+          </div>
+      </div>
+        </div>
+            
+        </div>
+    </div>
+      </div>
+
+    <br>
+    <br>
+    <br>
+    
+    <div>
+        <div class="firstbottom">
+            <div class="innerbox1">
+                <div class="brandlogo1">
+                    <a href="https://www.facebook.com/funcorp.in/">
+                    <button>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </button>
+                    </a>
+
+                    <a href="https://twitter.com/funcorpIN">
+                        <button>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </button>
+                    </a>
+
+                    <a href="https://www.instagram.com/funcorp.in/">
+                        <button>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </div>
+
+                <div class="para">
+                    <p>©2020 S M FUNCORP TOYS LLP</p>
+                </div>
+            </div>
+        </div>
+        <div class="secoundbottom">
+            <p>Brands</p>
+            <p>|</p>
+            <p>Characters</p>
+            <p>|</p>
+            <p>Categories</p>
+            <p>|</p>
+            <p>Pivacy and Cookies</p>
+            <p>|</p>
+            <p>Disclaimer</p>
+            <p>|</p>
+            <p>Returns</p>
+            <p>|</p>
+            <p>Terms and Conditions</p>
+            <p>|</p>
+            <p>Shipping Policy</p>
+            <p>|</p>
+            <p>Careers</p>
+            <p>|</p>
+            <p>Contact Us</p>
+        </div>
+    </div>
+</body>
+<script>
+        var arr=[{color:"F0B1D0",number:1,text:"Tired of getting gifts you don't want?"},
+            {color:"A2D0D1",number:2,text:"Make life easy for your gifter by letting them know what you want."},
+            {color:"BAD371",number:3,text:"Pick from over 3000 toys, games and collectibles."},
+            {color:"FE9148",number:4,text:"Get multiple people to chip in for the expensive stuff."},
+            {color:"FECC40",number:5,text:"Make the gifting process simple for everyone."},
+    ]
+    arr.map(function(el,id,arr){
+
+    var box=document.createElement("div")
+    box.setAttribute("id","box")
+        var div1=document.createElement("div")
+        div1.setAttribute("id","d1")
+        div1.innerText=el.number
+        var x= el.color
+        div1.style.borderColor="#"+x
+        div1.style.color="#"+x
+        var div2=document.createElement("div")
+        div2.setAttribute("id","d2")
+        var y= el.color
+        div2.style.borderColor="#"+y
+        var brk=document.createElement("br")
+        var para=document.createElement("p")
+        para.innerText=el.text
+    box.append(div1,div2,brk,para)
+    document.querySelector("#container").append(box)
+})
+
+var arr1=[{image:"https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/pencil.png",heading:"STEP 1",text:"Create your Gift Registry and fill in details of the event"},
+    {image:"https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/gift.png",heading:"STEP 2",text:"Click on Add to Registry on the Product Details page to add a product"},
+    {image:"https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/strategy.png",heading:"STEP 3",text:"Once all your gifts are added, share with family and friends"},
+    {image:"https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/payment.png",heading:"STEP 4",text:"Secure Payments can be made by the Recipients"},
+    {image:"https://www.funcorp.in/pub/static/version1622413514/frontend/Funcorp/default/en_US/images/doorstep.png",heading:"STEP 5",text:"Get your Perfect Gifts delivered at your doorstep"},
+    ]
+
+    arr1.map(function(el,id,arr){
+        var box=document.createElement("div")
+        box.setAttribute("id","box1")
+            var circleOne=document.createElement("div")
+            circleOne.setAttribute("id","circle1")
+            var circleTwo=document.createElement("div")
+            circleTwo.setAttribute("id","circle2")
+            var image=document.createElement("img")
+            image.setAttribute("id","image1")
+            image.src=el.image
+            circleTwo.append(image)
+            circleOne.append(circleTwo)
+
+            var brk=document.createElement("br")
+
+            var pointerbox=document.createElement("div")
+            pointerbox.setAttribute("id","pointer")
+            var linebox=document.createElement("div")
+            linebox.setAttribute("id","line")
+            var headingBox=document.createElement("div")
+            var heading=document.createElement("h3")
+            heading.innerText=el.heading
+            var para=document.createElement("p")
+            para.innerText=el.text
+            headingBox.append(heading,para)
+        
+        box.append(circleOne,brk,pointerbox,linebox,headingBox)
+    document.querySelector("#container1").append(box)
+    })
+    var arr4=[{image:"URL('https://d2s7hpbx4rtiif.cloudfront.net/magenest/giftregistry/type/image/b/a/baby-shower-event.jpg')",color:"#FD5502",text:"BABY SHOWER"},
+        {image:"URL('https://d2s7hpbx4rtiif.cloudfront.net/magenest/giftregistry/type/image/b/i/birthday-event.jpg')",color:"#2293E3",text:"BIRTHDAY"},
+        {image:"URL('https://d2s7hpbx4rtiif.cloudfront.net/magenest/giftregistry/type/image/s/p/special-occ-event.jpg')",color:"#72B831",text:"SPECIAL OCCASSIONS"}]
+
+    arr4.map(function(el,id,arr){
+
+        var anchor=document.createElement("a")
+        anchor.href="giftinfo.html"
+        var box4=document.createElement("div")
+        box4.setAttribute("id","box3")
+        // x=url(el.image)
+        box4.style.border="1px solid"+ el.color
+        box4.style.backgroundImage=el.image
+        var innerbox4=document.createElement("div")
+        innerbox4.setAttribute("id","box2")
+        innerbox4.style.backgroundColor=el.color
+        var heading4=document.createElement("h5")
+        heading4.innerText=el.text
+        innerbox4.append(heading4)
+        box4.append(innerbox4)
+        anchor.append(box4)
+        document.querySelector("#container4").append(anchor)
+    })
+</script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+<script>
+    $('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  wrapAround: true,
+  freeScroll: true,
+});
+</script>
+
+</html>
